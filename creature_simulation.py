@@ -62,7 +62,7 @@ class SwimmingCreature(Creature):
             return
 
         print(f"{self.name} attacks from underwater at depth {self.depth}!")
-        print(f"It splashes {target.name} for 7 damage!")
+        print(f"It splashes {target.name} for {self.attack_power} damage!")
         target.hp -= self.attack_power
         if target.hp < 0:
             target.hp = 0
@@ -128,7 +128,8 @@ if __name__ == "__main__":
     hawk.attack(dummy)
     print(f"Dummy HP should be 32 → Actual: {dummy.hp}")
     dummy.attack(hawk)
-    print()    print("=== Tests Completed ===")
+    print()
+    print("=== Tests Completed ===")
     print()
 
     print("=== SwimmingCreature Tests ===\n")
